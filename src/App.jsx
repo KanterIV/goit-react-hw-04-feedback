@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Section } from 'components/Section/Section';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Statistics } from 'components/Statistics/Statistics';
@@ -18,14 +18,14 @@ export const App = () => {
 
   const handelBtnClick = feedbackGrade => {
     switch (feedbackGrade) {
-      case good:
-        setGood(prevState => (prevState += 1));
+      case 'good':
+        setGood(prevState => prevState + 1);
         break;
-      case neutral:
-        setNeutral(prevState => (prevState += 1));
+      case 'neutral':
+        setNeutral(prevState => prevState + 1);
         break;
-      case bad:
-        setBad(prevState => (prevState += 1));
+      case 'bad':
+        setBad(prevState => prevState + 1);
         break;
       default:
         return;
